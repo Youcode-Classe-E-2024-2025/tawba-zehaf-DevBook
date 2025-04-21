@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>DevBook</title>
+</head>
+<body>
+  <h1>DevBook 📚</h1>
+  
+  <form id="book-form">
+    <input type="text" id="title" placeholder="Titre" required>
+    <input type="text" id="author" placeholder="Auteur" required>
+    <select id="status">
+      <option value="à lire">À lire</option>
+      <option value="en cours">En cours</option>
+      <option value="lu">Lu</option>
+    </select>
+    <button type="submit">Ajouter</button>
+  </form>
+
+
+  <div id="book-list"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
