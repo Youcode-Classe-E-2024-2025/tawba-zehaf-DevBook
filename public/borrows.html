@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Emprunts - DevBook</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">📚 Livres</a>
+    <a href="users.html">👤 Utilisateurs</a>
+    <a href="categories.html">📁 Catégories</a>
+    <a href="borrows.html">📚 Emprunts</a>
+    <a href="stats.html">📊 Statistiques</a>
+  </nav>
+
+  <h1>📚 Liste des emprunts</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Livre</th>
+        <th>Utilisateur</th>
+        <th>Date d'emprunt</th>
+        <th>Échéance</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="borrow-list"></tbody>
+  </table>
+
+  <script src="js/borrows.js"></script>
+</body>
+</html>
