@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Catégories - DevBook</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">📚 Livres</a>
+    <a href="users.html">👤 Utilisateurs</a>
+    <a href="categories.html">📁 Catégories</a>
+    <a href="borrows.html">📚 Emprunts</a>
+    <a href="stats.html">📊 Statistiques</a>
+  </nav>
+
+  <h1>📁 Catégories</h1>
+
+  <form id="add-category-form">
+    <input type="text" id="category-name" placeholder="Nom de la catégorie" required>
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Nombre de livres</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="category-list"></tbody>
+  </table>
+
+  <script src="js/categories.js"></script>
+</body>
+</html>
