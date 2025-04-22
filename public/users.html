@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Utilisateurs - DevBook</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">📚 Livres</a>
+    <a href="users.html">👤 Utilisateurs</a>
+    <a href="categories.html">📁 Catégories</a>
+    <a href="borrows.html">📚 Emprunts</a>
+    <a href="stats.html">📊 Statistiques</a>
+  </nav>
+
+  <h1>👤 Utilisateurs</h1>
+
+  <form id="add-user-form">
+    <input type="text" id="user-name" placeholder="Nom complet" required />
+    <input type="email" id="user-email" placeholder="Email" required />
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Emprunts</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="user-list"></tbody>
+  </table>
+
+  <h2>📚 Emprunts de l’utilisateur sélectionné</h2>
+  <ul id="user-borrows"></ul>
+
+  <script src="js/users.js"></script>
+</body>
+</html>
