@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Statistiques - DevBook</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">📚 Livres</a>
+    <a href="users.html">👤 Utilisateurs</a>
+    <a href="categories.html">📁 Catégories</a>
+    <a href="borrows.html">📚 Emprunts</a>
+    <a href="stats.html">📊 Statistiques</a>
+  </nav>
+
+  <h1>📊 Statistiques DevBook</h1>
+
+  <section>
+    <h2>🏆 Top 10 livres les plus empruntés</h2>
+    <label for="month">Choisir un mois :</label>
+    <input type="month" id="month" />
+    <ul id="top-books"></ul>
+  </section>
+
+  <section>
+    <h2>🔴 Livres en retard</h2>
+    <ul id="late-books"></ul>
+  </section>
+
+  <section>
+    <h2>📁 Catégorie la plus empruntée</h2>
+    <p id="top-category"></p>
+  </section>
+
+  <section>
+    <h2>📊 Totaux</h2>
+    <p id="total-borrows">📦 Emprunts : ...</p>
+    <p id="active-users">👥 Utilisateurs actifs : ...</p>
+  </section>
+
+  <script src="js/stats.js"></script>
+</body>
+</html>
