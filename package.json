@@ -1,0 +1,27 @@
+{
+  "name": "devbook",
+  "version": "1.0.0",
+  "description": "DevBook is a full-stack web application that allows developers to manage their personal library of technical books. Whether it’s books on programming, design, or architecture, DevBook helps you track your reading progress, categorize your collection, and analyze your data dynamically.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youcode-Classe-E-2024-2025/tawba-zehaf-DevBook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Youcode-Classe-E-2024-2025/tawba-zehaf-DevBook/issues"
+  },
+  "homepage": "https://github.com/Youcode-Classe-E-2024-2025/tawba-zehaf-DevBook#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
