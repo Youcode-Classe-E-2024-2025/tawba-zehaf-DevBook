@@ -1,17 +1,17 @@
 CREATE DATABASE devbook;
 
 USE devbook;
-CREATE TABLE categorie (
+CREATE TABLE categories (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nom VARCHAR(255) NOT NULL
 );
-CREATE TABLE livre (
+CREATE TABLE livres (
   id INT AUTO_INCREMENT PRIMARY KEY,
   titre VARCHAR(255) NOT NULL,
   auteur VARCHAR(255) NOT NULL,
   categorieId INT,
   status VARCHAR(50),
-  FOREIGN KEY (categorieId) REFERENCES categorie(id)
+  FOREIGN KEY (categoriesId) REFERENCES categorie(id)
 );
 CREATE TABLE utilisateur (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -23,14 +23,14 @@ CREATE TABLE emprunt (
   utilisateurId INT,
   dateEmprunt DATE,
   dateRetour DATE,
-  PRIMARY KEY (livreId, utilisateurId),
-  FOREIGN KEY (livreId) REFERENCES livre(id),
+  PRIMARY KEY (livresId, utilisateurId),
+  FOREIGN KEY (livresId) REFERENCES livre(id),
   FOREIGN KEY (utilisateurId) REFERENCES utilisateur(id)
 );
 
-INSERT INTO categorie (nom) VALUES ('Programmation'), ('Design'), ('Architecture');
+INSERT INTO categories (nom) VALUES ('Programmation'), ('Design'), ('Architecture');
 
-INSERT INTO livre (titre, auteur, categorieId, status) 
+INSERT INTO livres (titre, auteur, categoriesId, status) 
 VALUES ('JavaScript pour les nuls', 'John Doe', 1, 'à lire'),
        ('Apprendre le design', 'Jane Doe', 2, 'en cours');
 
