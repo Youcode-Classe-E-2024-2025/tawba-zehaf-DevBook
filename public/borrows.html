@@ -2,33 +2,39 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emprunts - DevBook</title>
-  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">📚 Livres</a>
-    <a href="users.html">👤 Utilisateurs</a>
-    <a href="categories.html">📁 Catégories</a>
-    <a href="borrows.html">📚 Emprunts</a>
-    <a href="stats.html">📊 Statistiques</a>
+<body class="bg-gray-100 text-gray-800">
+  <nav class="bg-white shadow p-4 flex space-x-4">
+    <a href="index.html" class="text-blue-600 hover:underline">📚 Livres</a>
+    <a href="users.html" class="text-blue-600 hover:underline">👤 Utilisateurs</a>
+    <a href="categories.html" class="text-blue-600 hover:underline">📁 Catégories</a>
+    <a href="borrows.html" class="text-blue-600 hover:underline">📚 Emprunts</a>
+    <a href="stats.html" class="text-blue-600 hover:underline">📊 Statistiques</a>
   </nav>
 
-  <h1>📚 Liste des emprunts</h1>
+  <main class="max-w-6xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">📚 Liste des emprunts</h1>
 
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Livre</th>
-        <th>Utilisateur</th>
-        <th>Date d'emprunt</th>
-        <th>Échéance</th>
-        <th>Status</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody id="borrow-list"></tbody>
-  </table>
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-200 rounded shadow">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="px-4 py-2 text-left">Livre</th>
+            <th class="px-4 py-2 text-left">Utilisateur</th>
+            <th class="px-4 py-2 text-left">Date d'emprunt</th>
+            <th class="px-4 py-2 text-left">Échéance</th>
+            <th class="px-4 py-2 text-left">Statut</th>
+            <th class="px-4 py-2 text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="borrow-list" class="divide-y divide-gray-100">
+        </tbody>
+      </table>
+    </div>
+  </main>
 
   <script src="js/borrows.js"></script>
 </body>

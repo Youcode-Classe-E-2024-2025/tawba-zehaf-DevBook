@@ -2,42 +2,45 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Statistiques - DevBook</title>
-  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">📚 Livres</a>
-    <a href="users.html">👤 Utilisateurs</a>
-    <a href="categories.html">📁 Catégories</a>
-    <a href="borrows.html">📚 Emprunts</a>
-    <a href="stats.html">📊 Statistiques</a>
+<body class="bg-gray-100 text-gray-800">
+  <nav class="bg-white shadow p-4 flex space-x-4">
+    <a href="index.html" class="text-blue-600 hover:underline">📚 Livres</a>
+    <a href="users.html" class="text-blue-600 hover:underline">👤 Utilisateurs</a>
+    <a href="categories.html" class="text-blue-600 hover:underline">📁 Catégories</a>
+    <a href="borrows.html" class="text-blue-600 hover:underline">📚 Emprunts</a>
+    <a href="stats.html" class="text-blue-600 hover:underline">📊 Statistiques</a>
   </nav>
 
-  <h1>📊 Statistiques DevBook</h1>
+  <main class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">📊 Statistiques DevBook</h1>
 
-  <section>
-    <h2>🏆 Top 10 livres les plus empruntés</h2>
-    <label for="month">Choisir un mois :</label>
-    <input type="month" id="month" />
-    <ul id="top-books"></ul>
-  </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">🏆 Top 10 livres les plus empruntés</h2>
+      <label for="month" class="block mb-1">Choisir un mois :</label>
+      <input type="month" id="month" class="border p-2 rounded mb-4">
+      <ul id="top-books" class="list-disc pl-5 space-y-1"></ul>
+    </section>
 
-  <section>
-    <h2>🔴 Livres en retard</h2>
-    <ul id="late-books"></ul>
-  </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">🔴 Livres en retard</h2>
+      <ul id="late-books" class="list-disc pl-5 space-y-1"></ul>
+    </section>
 
-  <section>
-    <h2>📁 Catégorie la plus empruntée</h2>
-    <p id="top-category"></p>
-  </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">📁 Catégorie la plus empruntée</h2>
+      <p id="top-category" class="text-lg"></p>
+    </section>
 
-  <section>
-    <h2>📊 Totaux</h2>
-    <p id="total-borrows">📦 Emprunts : ...</p>
-    <p id="active-users">👥 Utilisateurs actifs : ...</p>
-  </section>
+    <section>
+      <h2 class="text-xl font-semibold mb-2">📊 Totaux</h2>
+      <p id="total-borrows" class="mb-1">📦 Emprunts : ...</p>
+      <p id="active-users">👥 Utilisateurs actifs : ...</p>
+    </section>
+  </main>
 
   <script src="js/stats.js"></script>
 </body>

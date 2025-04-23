@@ -2,40 +2,44 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utilisateurs - DevBook</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <nav>
-    <a href="index.html">📚 Livres</a>
-    <a href="users.html">👤 Utilisateurs</a>
-    <a href="categories.html">📁 Catégories</a>
-    <a href="borrows.html">📚 Emprunts</a>
-    <a href="stats.html">📊 Statistiques</a>
+<body class="bg-gray-100 text-gray-800">
+  <nav class="bg-white shadow p-4 flex space-x-4">
+    <a href="index.html" class="text-blue-600 hover:underline">📚 Livres</a>
+    <a href="users.html" class="text-blue-600 hover:underline">👤 Utilisateurs</a>
+    <a href="categories.html" class="text-blue-600 hover:underline">📁 Catégories</a>
+    <a href="borrows.html" class="text-blue-600 hover:underline">📚 Emprunts</a>
+    <a href="stats.html" class="text-blue-600 hover:underline">📊 Statistiques</a>
   </nav>
 
-  <h1>👤 Utilisateurs</h1>
+  <main class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">👤 Utilisateurs</h1>
 
-  <form id="add-user-form">
-    <input type="text" id="user-name" placeholder="Nom complet" required />
-    <input type="email" id="user-email" placeholder="Email" required />
-    <button type="submit">Ajouter</button>
-  </form>
+    <form id="add-user-form" class="mb-6 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+      <input type="text" id="user-name" placeholder="Nom complet" required class="border p-2 rounded w-full md:w-1/3" />
+      <input type="email" id="user-email" placeholder="Email" required class="border p-2 rounded w-full md:w-1/3" />
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Ajouter</button>
+    </form>
 
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Nom</th>
-        <th>Email</th>
-        <th>Emprunts</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody id="user-list"></tbody>
-  </table>
+    <table class="w-full table-auto bg-white shadow rounded mb-6">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="p-2 text-left">Nom</th>
+          <th class="p-2 text-left">Email</th>
+          <th class="p-2 text-left">Emprunts</th>
+          <th class="p-2 text-left">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="user-list">
+      </tbody>
+    </table>
 
-  <h2>📚 Emprunts de l’utilisateur sélectionné</h2>
-  <ul id="user-borrows"></ul>
+    <h2 class="text-2xl font-semibold mb-4">📚 Emprunts de l’utilisateur sélectionné</h2>
+    <ul id="user-borrows" class="list-disc pl-5 space-y-1"></ul>
+  </main>
 
   <script src="js/users.js"></script>
 </body>
