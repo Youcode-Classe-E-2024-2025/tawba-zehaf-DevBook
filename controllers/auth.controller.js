@@ -1,7 +1,15 @@
 const User = require('../models/User');
+const path = require('path');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+exports.showSignupForm = (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public/signup.html'));
+}
+
+exports.showLoginForm = (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'login.html'));
+}
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
