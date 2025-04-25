@@ -7,13 +7,63 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen">
-  <form id="signup-form" class="bg-white p-6 rounded shadow-md w-full max-w-sm">
+  <div class="bg-white p-6 rounded shadow-md w-full max-w-sm">
     <h2 class="text-2xl font-bold mb-4">Inscription</h2>
-    <input type="text" id="signup-name" placeholder="Nom complet" required class="w-full p-2 mb-4 border rounded" />
-    <input type="email" id="signup-email" placeholder="Email" required class="w-full p-2 mb-4 border rounded" />
-    <input type="password" id="signup-password" placeholder="Mot de passe" required class="w-full p-2 mb-4 border rounded" />
-    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">S'inscrire</button>
-    <p class="mt-4 text-center text-sm">Déjà un compte? <a href="login.html" class="text-blue-500 hover:underline">Se connecter</a></p>
-  </form>
+
+    <!-- Messages d'erreur -->
+    <div id="error-message" class="hidden mb-4 p-3 rounded text-red-700 bg-red-100">
+      <span id="error-text"></span>
+    </div>
+
+    <form id="signup-form" class="space-y-4">
+      <!-- Nom -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+        <input type="text" id="signup-name" 
+               placeholder="Votre nom complet" 
+               required 
+               class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        <p id="name-error" class="hidden text-red-500 text-sm mt-1"></p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <input type="email" id="signup-email" 
+               placeholder="votre.email@example.com" 
+               required 
+               class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        <p id="email-error" class="hidden text-red-500 text-sm mt-1"></p>
+      </div>
+
+      <!-- Mot de passe -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">Mot de passe</label>
+        <input type="password" id="signup-password" 
+               placeholder="Minimum 8 caractères" 
+               required 
+               minlength="8"
+               class="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        <p id="password-error" class="hidden text-red-500 text-sm mt-1">
+          Le mot de passe doit contenir au moins 8 caractères
+        </p>
+      </div>
+
+      <!-- Bouton d'inscription -->
+      <button type="submit" 
+              class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+        <span id="submit-text">S'inscrire</span>
+        <span id="loading-spinner" class="hidden">🔒</span>
+      </button>
+
+      <!-- Lien vers la connexion -->
+      <p class="mt-4 text-center text-sm">
+        Déjà un compte? 
+        <a href="login.html" class="text-blue-500 hover:underline">Se connecter</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="js/signup.js"></script>
 </body>
 </html>
