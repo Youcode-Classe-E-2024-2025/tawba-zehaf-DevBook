@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevBook - Gestionnaire de Bibliothèque</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  <style>
+    .gradient-text {
+      background: linear-gradient(45deg, #4f46e5, #818cf8);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold gradient-text">DevBook</h1>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="/login" 
+             class="text-blue-600 hover:text-blue-700 px-4 py-2 rounded-lg">
+            Se connecter
+          </a>
+          <a href="/signup" 
+             class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg">
+            S'inscrire
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <div class="flex flex-col md:flex-row items-center justify-between">
+      <!-- Text Content -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Gérez votre bibliothèque avec DevBook
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Une solution complète pour la gestion de vos livres, utilisateurs et emprunts.
+        </p>
+        <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+          <a href="/books" 
+             class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 
+             text-white px-8 py-3 rounded-lg font-semibold">
+            Explorer les livres
+          </a>
+          <a href="/categories" 
+             class="bg-white hover:bg-gray-50 text-blue-600 hover:text-blue-700 
+             border border-blue-600 px-8 py-3 rounded-lg font-semibold">
+            Voir les catégories
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2 mt-8 md:mt-0">
+        <img src="https://images.unsplash.com/photo-1507272144178-53c3b6c4c8b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+             alt="Bibliothèque" 
+             class="rounded-lg shadow-2xl">
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Pourquoi choisir DevBook ?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Feature 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Gestion des livres</h3>
+        <p class="text-gray-600">Ajoutez, modifiez et suivez facilement votre collection de livres.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Suivi des emprunts</h3>
+        <p class="text-gray-600">Gérez facilement les emprunts et retours des livres.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Statistiques</h3>
+        <p class="text-gray-600">Consultez des statistiques détaillées sur votre bibliothèque.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-600">© 2025 DevBook. Tous droits réservés.</p>
+        <div class="flex space-x-4">
+          <a href="/about" class="text-gray-600 hover:text-blue-600">À propos</a>
+          <a href="/contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</body>
+</html>
