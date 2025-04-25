@@ -18,10 +18,40 @@
   <main class="max-w-4xl mx-auto p-6">
     <h1 class="text-3xl font-bold mb-6">📁 Catégories</h1>
 
-    <form id="add-category-form" class="mb-6 flex items-center space-x-4">
-      <input type="text" id="category-name" placeholder="Nom de la catégorie" required class="border p-2 rounded w-full">
-      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Ajouter</button>
-    </form>
+    <!-- Barre de recherche et filtres -->
+    <div class="mb-6">
+      <div class="flex items-center space-x-4">
+        <div class="flex-1">
+          <input type="text" id="category-search" 
+                 placeholder="Rechercher une catégorie..." 
+                 class="border p-2 rounded w-full" 
+                 oninput="searchCategories(this.value)">
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-sm text-gray-600">Trier par :</span>
+          <select id="sort-by" 
+                  class="border p-2 rounded"
+                  onchange="sortCategories(this.value)">
+            <option value="nom">Nom</option>
+            <option value="livres_count">Nombre de livres</option>
+          </select>
+          <select id="sort-order" 
+                  class="border p-2 rounded"
+                  onchange="sortCategories(document.getElementById('sort-by').value)">
+            <option value="asc">Croissant</option>
+            <option value="desc">Décroissant</option>
+          </select>
+        </div>
+      </div>
+
+      <form id="add-category-form" class="mt-4 flex items-center space-x-4">
+        <input type="text" id="category-name" 
+               placeholder="Nom de la catégorie" 
+               required 
+               class="border p-2 rounded w-full">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Ajouter</button>
+      </form>
+    </div>
 
     <table class="w-full table-auto bg-white shadow rounded">
       <thead class="bg-gray-200">
